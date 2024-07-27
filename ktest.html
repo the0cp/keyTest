@@ -1,0 +1,259 @@
+<html lang="en"><head>
+    <title>Keyboard Tester</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="text/javascript" language="JavaScript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/keyboardtester.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/shortcut_min.js"></script>
+    <style>
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-display: fallback;
+      src: url('fonts/Roboto-Regular.ttf');
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-display: fallback;
+      src: url('fonts/Roboto-Regular.ttf');
+    }
+    body{font-family:Roboto,sans-serif;background-color:#efefef}
+    .kbmain{max-width:1100px;margin:0 auto;}
+    .kbblock{margin-bottom:16px;background-color:#fff;padding:16px;}
+    h1{color:#0d2693;margin:8px 16px;font-weight:400;font-size:2.5em}
+    #keyTestArea{background:url(/images/logo_small.gif) no-repeat right top;background-color:#fff}#keyboard{clear:both}#keyboard tr td{padding:4px 8px;vertical-align:top}.key_row div{float:left}.key_block{border-collapse:separate;border-spacing:8px;margin:0;padding:0}.key_block tr td,.key_row div{padding:4px 8px;margin:4px;border-width:2px;border-style:solid;font-family:monospace;border-radius:4px}.key_block td.blank{border-color:transparent}.key_small{font-size:10px}.key_row{clear:both}.key_un{border-color:silver}.key_highlight{border-color:orange}.key_pressed{border-color:green}.key_pressed_m{border-color:gray}#resetbutton{clear:both;padding:16px}#hidden_text{width:1px;height:1px;border:0}#key32{width:100px;text-align:center}.key_name{font-family:monospace}.label{padding-right:20px;font-style:italic}#soundArea{float:right;margin-left:2em;margin-top:24px}.hidden{display:none}
+    @media screen and (min-width: 1200px) { key_block tr td,.key_row div { font-size:larger;} }
+    select{padding:2px;}#kt_fineprint{font-size:small;margin:16px 0;padding:16px 0}
+    </style>
+    </head>
+    
+    <body>
+    <div>
+    <div class="kbmain">
+   
+    
+    <div class="kbblock">
+    
+    <table id="keyboard">
+    <tbody><tr class="key_small"><td><div class="key_row"><div id="key27" class="key_un">Esc</div>
+    <div id="key112" class="key_un">F1</div>
+    <div id="key113" class="key_un">F2</div>
+    <div id="key114" class="key_un">F3</div>
+    <div id="key115" class="key_un">F4</div>
+    <div id="key116" class="key_un">F5</div>
+    
+    <div id="key117" class="key_un">F6</div>
+    <div id="key118" class="key_un">F7</div>
+    <div id="key119" class="key_un">F8</div>
+    <div id="key120" class="key_un">F9</div>
+    <div id="key121" class="key_un">F10</div>
+    <div id="key122" class="key_un">F11</div>
+    <div id="key123" class="key_un">F12</div>
+    </div>
+    
+    <div id="fnKeyA" class="hidden">
+    <div class="key_row">
+    <div id="key124" class="key_un">F13</div>
+    <div id="key125" class="key_un">F14</div>
+    <div id="key126" class="key_un">F15</div>
+    <div id="key127" class="key_un">F16</div>
+    <div id="key128" class="key_un">F17</div>
+    
+    <div id="key129" class="key_un">F18</div>
+    <div id="key130" class="key_un">F19</div>
+    <div id="key131" class="key_un">F20</div>
+    <div id="key132" class="key_un">F21</div>
+    <div id="key133" class="key_un">F22</div>
+    <div id="key134" class="key_un">F23</div>
+    <div id="key135" class="key_un">F24</div>
+    
+    </div>
+    <div style="clear:both;">Wesley Memorial Extended Function Key Row</div>
+    </div>
+    <div id="fnKeyB" class="hidden">
+    <div class="key_row">
+    <div id="key136" class="key_un">F25</div>
+    <div id="key137" class="key_un">F26</div>
+    <div id="key138" class="key_un">F27</div>
+    <div id="key139" class="key_un">F28</div>
+    <div id="key140" class="key_un">F29</div>
+    <div id="key141" class="key_un">F30</div>
+    <div id="key142" class="key_un">F31</div>
+    <div id="key143" class="key_un">F32</div>
+    </div>
+    </div>
+    </td><td><div class="key_row"><div id="key44" class="key_un">Prnt<br>Scrn</div>
+    
+    <div id="key145" class="key_un">Scroll<br>Lock</div>
+    <div id="key19" class="key_un">Pause<br>&nbsp;</div>
+    </div>
+    
+    </td>
+    
+    </tr>
+    
+    <tr><td id="main_keyboard" class="layout-standard" rowspan="2"><div class="key_row"><div id="key192" class="key_un">~</div>
+    <div id="key49" class="key_un">1</div>
+    <div id="key50" class="key_un">2</div>
+    <div id="key51" class="key_un">3</div>
+    <div id="key52" class="key_un">4</div>
+    <div id="key53" class="key_un">5</div>
+    
+    <div id="key54" class="key_un">6</div>
+    <div id="key55" class="key_un">7</div>
+    <div id="key56" class="key_un">8</div>
+    <div id="key57" class="key_un">9</div>
+    <div id="key48" class="key_un">0</div>
+    <div id="key173" class="key_un">-</div>
+    <div id="key61" class="key_un">+</div>
+    <div id="key8" class="key_un">Bckspce</div>
+    </div>
+    
+    <div class="key_row"><div id="key9" class="key_un">Tab</div>
+    <div id="key81" class="key_un">Q</div>
+    <div id="key87" class="key_un">W</div>
+    <div id="key69" class="key_un">E</div>
+    <div id="key82" class="key_un">R</div>
+    <div id="key84" class="key_un">T</div>
+    <div id="key89" class="key_un">Y</div>
+    <div id="key85" class="key_un">U</div>
+    
+    <div id="key73" class="key_un">I</div>
+    <div id="key79" class="key_un">O</div>
+    <div id="key80" class="key_un">P</div>
+    <div id="key219" class="key_un">{</div>
+    <div id="key221" class="key_un">}</div>
+    <div id="key220" class="key_un">\&nbsp;&nbsp;</div>
+    </div>
+    
+    <div class="key_row"><div id="key20" class="key_un">Caps</div>
+    <div id="key65" class="key_un">A</div>
+    
+    <div id="key83" class="key_pressed">S</div>
+    <div id="key68" class="key_pressed">D</div>
+    <div id="key70" class="key_pressed">F</div>
+    <div id="key71" class="key_pressed">G</div>
+    <div id="key72" class="key_un">H</div>
+    <div id="key74" class="key_pressed">J</div>
+    <div id="key75" class="key_pressed">K</div>
+    <div id="key76" class="key_pressed">L</div>
+    <div id="keycolon" class="key_un">;</div>
+    
+    <div id="key222" class="key_un">'</div>
+    <div id="key13" class="key_pressed_m">Enter</div>
+    </div>
+    
+    <div class="key_row"><div id="key16" class="key_un">Shift</div>
+    <div id="key90" class="key_un">Z</div>
+    <div id="key88" class="key_un">X</div>
+    <div id="key67" class="key_pressed">C</div>
+    <div id="key86" class="key_pressed">V</div>
+    <div id="key66" class="key_pressed">B</div>
+    
+    <div id="key78" class="key_pressed">N</div>
+    <div id="key77" class="key_un">M</div>
+    <div id="key188" class="key_un">,</div>
+    <div id="key190" class="key_un">.</div>
+    <div id="key191" class="key_un">/</div>
+    <div id="key16b" class="key_un">Shift</div>
+    </div>
+    
+    <div class="key_row"><div id="key17" class="key_un">Ctrl</div>
+    <div id="key91" class="key_un">Win</div>
+    <div id="key18" class="key_un">Alt</div>
+    <div id="key224" class="key_un">Com</div>
+    <div id="key32" class="key_un">Spacebar</div>
+    <div id="key224b" class="key_un">Com</div>
+    
+    <div id="key18b" class="key_un">Alt</div>
+    <div id="key92" class="key_un">Win</div>
+    <div id="key93" class="key_un">Sel</div>
+    
+    <div id="key17b" class="key_un">Ctrl</div>
+    </div>
+    
+    </td><td class="key_small">
+    <div class="key_row">
+    <div id="key45" class="key_un">Insert</div>
+    <div id="key36" class="key_un">Home</div>
+    <div id="key33" class="key_un">PgUp&nbsp;</div>
+    </div>
+    
+    <div class="key_row">
+    <div id="key46" class="key_un">Delete</div>
+    <div id="key35" class="key_un">End&nbsp;</div>
+    <div id="key34" class="key_un">PgDwn</div>
+    </div>
+    
+    </td><td rowspan="2">
+    <table class="key_block">
+    <tbody><tr>
+    <td id="key144" class="key_small key_un">Num<br>Lck</td>
+    <td id="key111" class="key_un">/</td>
+    <td id="key106" class="key_un">*</td>
+    
+    <td id="key109b" class="key_un">-</td>
+    </tr>
+    
+    <tr><td id="key103" class="key_un">7</td>
+    <td id="key104" class="key_un">8</td>
+    <td id="key105" class="key_un">9</td>
+    <td id="key107b" class="key_un" rowspan="2">+</td>
+    </tr>
+    
+    <tr><td id="key100" class="key_un">4</td>
+    <td id="key101" class="key_un">5</td>
+    <td id="key102" class="key_un">6</td>
+    </tr>
+    
+    <tr><td id="key97" class="key_un">1</td>
+    <td id="key98" class="key_un">2</td>
+    <td id="key99" class="key_un">3</td>
+    <td id="key13b" class="key_small key_pressed_m" rowspan="2">Entr</td>
+    </tr>
+    
+    <tr><td id="key96" class="key_un" colspan="2">0</td>
+    <td id="key110" class="key_un">.</td>
+    </tr>
+    </tbody></table>
+    
+    </td></tr>
+    <tr><td align="center">
+    <table class="key_block">
+    <tbody><tr>
+    <td class="blank">&nbsp;</td>
+    <td id="key38" class="key_un">&#8673</td>
+    <td class="blank">&nbsp;</td>
+    </tr>
+    
+    <tr>
+    <td id="key37" class="key_un">&#8672</td>
+    <td id="key40" class="key_un">&#8675</td>
+    <td id="key39" class="key_un">&#8674</td>
+    </tr>
+    </tbody></table>
+    </td></tr>
+    </tbody></table>
+    </div>
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+    </div>
+    </div>
+    
+    
+    
+    </body></html>
